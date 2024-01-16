@@ -2,20 +2,19 @@
 
 MemeForm Component:
 
-[] Create a MemeForm component.
+[x] Create a MemeForm component.
 
 Text Input Fields:
 
-[] Add labeled text input fields for top and bottom text.
+[x] Add labeled text input fields for top and bottom text.
 
 Preview Image:
 
-[] Add an image element with a data-test-id attribute.
+[x] Add an image element with a data-test-id attribute.
 
 Meme Template Selector:
 
-[] Add a labeled input/dropdown for selecting a meme template.
-[] Implement logic to select "doge."
+[x] Add a labeled input/dropdown for selecting a meme template.
 
 Download Button:
 
