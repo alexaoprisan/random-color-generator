@@ -71,7 +71,7 @@ function MemeForm() {
 
       {/* Button to trigger the download */}
       <div className="App">
-        <button onClick={handleClick}>Download image</button>
+        <button onClick={handleClick}>Download</button>
       </div>
     </div>
   );
