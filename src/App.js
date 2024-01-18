@@ -19,10 +19,6 @@ function MemeForm() {
   }
 
   const handleClick = () => {
-    //   const memeUrl = `https://memegen.link/${selectedTemplate}/${encodeURIComponent(topText)}/${encodeURIComponent(bottomText)}.jpg`;
-
-    //   saveAs(memeUrl, 'image.jpg');
-    //
     saveAs(
       `https://api.memegen.link/${selectedTemplate}/${encodeURIComponent(
         topText,
@@ -36,6 +32,7 @@ function MemeForm() {
       <input
         type="text"
         id="top-text"
+        value={topText}
         onChange={handleTopTextChange}
         placeholder="Enter top text"
       />
@@ -44,6 +41,7 @@ function MemeForm() {
       <input
         type="text"
         id="bottom-text"
+        value={bottomText}
         onChange={handleBottomTextChange}
         placeholder="Enter bottom text"
       />
@@ -52,6 +50,7 @@ function MemeForm() {
       <input
         type="text"
         id="meme-template"
+        value={selectedTemplate}
         onChange={handleTemplateChange}
         placeholder="Enter meme template"
       />
