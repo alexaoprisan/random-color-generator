@@ -6,7 +6,9 @@ function MemeForm() {
   // Setting up state variables for topText, bottomText, and selectedTemplate
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
-  const [selectedTemplate, setSelectedTemplate] = useState('doge');
+  const [selectedTemplate, setSelectedTemplate] = useState('buzz');
+  // const defaultPic =
+  // const memePic =
 
   // Event handler to update the states based on user input
   function handleTopTextChange(event) {
@@ -25,7 +27,7 @@ function MemeForm() {
   const handleClick = () => {
     // Invoking the saveAs function with the meme URL to trigger the download
     saveAs(
-      `https://api.memegen.link/${selectedTemplate}/${encodeURIComponent(
+      `https://api.memegen.link/images/${selectedTemplate}/${encodeURIComponent(
         topText,
       )}/${encodeURIComponent(bottomText)}.jpg`,
     );
@@ -63,7 +65,7 @@ function MemeForm() {
       <img
         id="meme-image"
         data-test-id="meme-image"
-        src={`https://memegen.link/${selectedTemplate}/${encodeURIComponent(
+        src={`https://api.memegen.link/images/${selectedTemplate}/${encodeURIComponent(
           topText,
         )}/${encodeURIComponent(bottomText)}.jpg`}
         alt="Generated Meme"
