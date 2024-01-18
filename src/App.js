@@ -30,7 +30,6 @@ function MemeForm() {
     <div>
       <label htmlFor="top-text">Top text</label>
       <input
-        type="text"
         id="top-text"
         value={topText}
         onChange={handleTopTextChange}
@@ -39,7 +38,6 @@ function MemeForm() {
 
       <label htmlFor="bottom-text">Bottom text</label>
       <input
-        type="text"
         id="bottom-text"
         value={bottomText}
         onChange={handleBottomTextChange}
@@ -48,7 +46,6 @@ function MemeForm() {
 
       <label htmlFor="meme-template">Meme template</label>
       <input
-        type="text"
         id="meme-template"
         value={selectedTemplate}
         onChange={handleTemplateChange}
@@ -64,7 +61,7 @@ function MemeForm() {
         alt="Generated Meme"
       />
       <div className="App">
-        <button onClick={handleClick}>Dowload image</button>
+        <button onClick={handleClick}>Download image</button>
       </div>
     </div>
   );
