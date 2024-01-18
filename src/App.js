@@ -1,11 +1,14 @@
 import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
 
+// Defining the MemeForm component
 function MemeForm() {
+  // Setting up state variables for topText, bottomText, and selectedTemplate
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
   const [selectedTemplate, setSelectedTemplate] = useState('doge');
 
+  // Event handler to update the states based on user input
   function handleTopTextChange(event) {
     setTopText(event.target.value);
   }
@@ -18,7 +21,9 @@ function MemeForm() {
     setSelectedTemplate(event.target.value);
   }
 
+  // Event handler for the "Download image" button click
   const handleClick = () => {
+    // Invoking the saveAs function with the meme URL to trigger the download
     saveAs(
       `https://api.memegen.link/${selectedTemplate}/${encodeURIComponent(
         topText,
@@ -26,8 +31,10 @@ function MemeForm() {
     );
   };
 
+  // Rendering the MemeForm component
   return (
     <div>
+      {/* Input for input boxes with associated label */}
       <label htmlFor="top-text">Top text</label>
       <input
         id="top-text"
@@ -52,6 +59,7 @@ function MemeForm() {
         placeholder="Enter meme template"
       />
 
+      {/* Image element displaying the generated meme */}
       <img
         id="meme-image"
         data-test-id="meme-image"
@@ -60,6 +68,8 @@ function MemeForm() {
         )}/${encodeURIComponent(bottomText)}.jpg`}
         alt="Generated Meme"
       />
+
+      {/* Button to trigger the download */}
       <div className="App">
         <button onClick={handleClick}>Download image</button>
       </div>
@@ -67,6 +77,7 @@ function MemeForm() {
   );
 }
 
+// Exporting the App component
 export default function App() {
   return (
     <div>
